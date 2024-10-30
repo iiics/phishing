@@ -1,20 +1,20 @@
-<?php
-if(isset($_POST['field1']) && isset($_POST['field2'])) {
-    $data = $_POST['field1'] . '-' . $_POST['field2'] . "\r\n";
-    $ret = file_put_contents('mydata.txt', $data, FILE_APPEND | LOCK_EX);
-    if($ret === false) {
-        die('There was an error writing this file');
-    }
-    else {
-        echo "$ret bytes written to file";
-    }
-}
-?>
-
-<form action="index.php" method="POST">
-		username: 
-    <input name="field1" type="text" />
-    password:
-    <input name="field2" type="text" />
-    <input type="submit" name="submit" value="Save Data">
+<form name="contact" method="POST" data-netlify="true">
+  <p>
+    <label>Your Name: <input type="text" name="name" /></label>
+  </p>
+  <p>
+    <label>Your Email: <input type="email" name="email" /></label>
+  </p>
+  <p>
+    <label>Your Role: <select name="role[]" multiple>
+      <option value="leader">Leader</option>
+      <option value="follower">Follower</option>
+    </select></label>
+  </p>
+  <p>
+    <label>Message: <textarea name="message"></textarea></label>
+  </p>
+  <p>
+    <button type="submit">Send</button>
+  </p>
 </form>
